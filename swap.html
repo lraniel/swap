@@ -20,10 +20,10 @@
     var iframe = document.getElementById('content');  
     var index = 0;
     var iframeSRC = ['Endereço1' , 'Endereço2', 'Endereço3', 'Endereço4', 'EndereçoN'];
-    trocarSlides();
+    swapContent();
 
     
-    function swapWindow() 
+    function swapContent() 
     {
             iframe.setAttribute('src', iframeSRC[index]);        
             if (index >= iframeSRC.length-1)
@@ -35,7 +35,7 @@
                 index++;
             }
 
-            setTimeout(trocarSlides, 5000);
+            setTimeout(swapContent, 5000);
     }
 
    
