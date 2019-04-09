@@ -1,0 +1,45 @@
+<html>
+<head>
+</head>
+<body>
+
+
+<iframe src="" name="content" id="content" width="" marginwidth="0" height="" marginheight="0" scrolling="yes" frameborder="0" hspace="0" vspace="0" allowtransparency="true" application="true"> </iframe>
+
+
+<!-- 
+    
+    @@@@SCRIPT Feito por Lucas Raniel.
+    Função: Trocar o conteúdo de um iframe a cada 'n' intervalos de segundos.
+
+ -->
+
+<script language="JavaScript" type="text/javascript">
+
+
+    var iframe = document.getElementById('content');  
+    var index = 0;
+    var iframeSRC = ['Endereço1' , 'Endereço2', 'Endereço3', 'Endereço4', 'EndereçoN'];
+    trocarSlides();
+
+    
+    function swapWindow() 
+    {
+            iframe.setAttribute('src', iframeSRC[index]);        
+            if (index >= iframeSRC.length-1)
+            {
+                index = 0;
+            }
+            else
+            {
+                index++;
+            }
+
+            setTimeout(trocarSlides, 5000);
+    }
+
+   
+</script>
+</body>
+
+</html>
